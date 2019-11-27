@@ -1,0 +1,47 @@
+<html>
+        <head>
+            <title>
+                S-Curve Modeller
+            </title>
+            <script src="node_modules/chart.js/dist/Chart.bundle.js" type="text/javascript"></script>
+            <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+            <script src="node_modules/ion-rangeslider/js/ion.rangeSlider.js" type="text/javascript"></script>
+            <link rel="stylesheet" href="node_modules/ion-rangeslider/css/ion.rangeSlider.css">
+            <link rel="stylesheet" href="scurve.css">
+            <script src="js/scurvemodel.js" type="text/javascript"></script>
+            <script src="js/utils.js" type="text/javascript"></script>
+            <script src="js/slider.js" type="text/javascript"></script>
+            
+        </head>
+
+        <body>
+                <div style="width:75%;">
+                        <canvas id="canvas"></canvas>
+                    </div>
+                    <br>
+                    <br>
+
+                
+            <script type="text/javascript">
+            
+
+            //alert("AboutToCallFunction");
+            //createDataSet();
+            
+            window.onload = function() {
+                createChart();
+			
+		};
+            </script> 
+            <div style="width:75%;" class="range-slider">
+                
+                <input id="rangeslider" type="text" class="js-range-slider" value="" />
+            </div> 
+            <form action="#" class="simple-form">
+                    <input id="startPhase" type="text" placeholder="Start" required onchange="updateStartPhase()"> 
+                    <input id="peakPhase" type="text" placeholder="Peak" required onchange="updatePeakPhase()">
+                    <input id="endPhase" type="text" placeholder="End" required onchange="updateEndPhase()">
+                  </form>
+            
+        </body>
+</html>
